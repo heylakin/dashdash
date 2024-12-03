@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="https://fonts.cdnfonts.com/css/apple-garamond" rel="stylesheet">
+        <link href="https://fonts.cdnfonts.com/css/w95fa" rel="stylesheet">
+                
+
+        <link rel="stylesheet" href="./styles.css" />
+        <!-- font awesome icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- JQUERY -->
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="/resources/demos/style.css">
+        <style>
+        #draggable { position:absolute; resize: none; }
+        </style>
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+        <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+        <script>
+        $( function() {
+          $( "#draggable" ).draggable();
+          $( "#draggable" ).resizable({
+            ghost: true,
+            maxWidth: 1100,
+            maxHeight: 700,
+            minHeight: 450,
+            minWidth: 750
+        });
+        } );
+
+        </script>
+    </head>
+    <body class="fade-in"> <!-- overscroll-behaviour: none; -->
+        <main class="viewport" id="draggable">
+            <div class="window-menu">
+                <p>Dash-Dash</p>
+                <div class="window-icons">
+                    <div class="window-icon" >
+                        <i class="fa-solid fa-window-minimize" data-mini="mini-btn"></i>
+                    </div>
+                    <div class="window-icon" >
+                        <i data-close="close" class="fa-solid fa-xmark"></i></i>
+                    </div>
+                </div>
+            </div>
+            <div class="wrapper" > <!-- set position absolute -->
+                <section class="left-container">
+                    <div class="left-container-content">
+                        <h1>Welcome back!</h1>
+                        <div class="coming-soon">
+                            <h3><strong>Features Coming Soon:</strong></h3>
+                                <ul>
+                                    <li>APIs for:</li>
+                                        <ul>
+                                            <li>Weather Sources</li>
+                                            <li>News Sources</li>
+                                            <li>Stocks Sources</li>
+                                        </ul>
+                                    <li>Bookmarks Section, Including a Google Chrome Extension.</li>
+                                </ul>
+                        </div>
+                    </div>
+                </section>
+                <section class="right-container" >
+                    <div class="to-do">
+                        <div id="list-items">
+
+                        </div>
+                        <div class="input-field">
+                                
+                                    
+                                    
+                            <input type="text" data-list-input="list-input" id="user-input" />
+                            <button data-add-list="add-list">+</button>
+                        </div>
+                    </div>
+
+                    <!-- <div class="bookmarks">
+
+                    </div> -->
+                </section>
+            </div>
+        </main>
+        <header>
+            <div class="icons">
+                <a href="https://catchbylakin.netlify.app" class="desktop-icon"><i class="fa-solid fa-globe"></i><p>Catch</p></a>
+                <a href="https://www.linkedin.com/in/heylakin/" class="desktop-icon"><i class="fa-brands fa-linkedin"></i><p>LinkedIn</p></a>
+                <a href="https://github.com/heylakin" class="desktop-icon"><i class="fa-brands fa-github"></i><p>GitHub</p></a>
+            </div>
+        </header>
+        
+        <footer>
+            
+            <div class="menu-pop" id="menu-modal">
+                <ul>
+                    <li data-dash="dash">Dash-Dash</li>
+                    <a href="https://excelsior-app-v1.netlify.app/" target="_blank"><li>Excelsior</li></a>
+                    <a href="https://github.com/heylakin" target="_blank"><li>GitHub</li></a>
+                    <a href="https://www.linkedin.com/in/heylakin/" target="_blank"><li>LinkedIn</li></a>
+                    <a href="https://catchbylakin.netlify.app" target="_blank"><li>Catch by Lakin</li></a>
+                </ul>
+            </div>
+            <div class="start-bar">
+                <div class="left-periferals">
+                    <div class="start" id="start" >
+                        <i class="fa-solid fa-house"></i>
+                        <p data-start="closed">Start</p>
+                    </div>
+                    <!-- Change to buttons -->
+                    <div class="minimize" id="minimize" >
+                        <p data-minimize="minimize">Dash-Dash | Your Personal Dashboard</p>
+                    </div>
+                </div>
+                <div class="utilities" id="utilities">
+                </div>
+            </div>
+        </footer>
+        <script src="main.js"></script>
+    </body>
+</html>
